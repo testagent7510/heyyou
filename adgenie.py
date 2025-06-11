@@ -29,7 +29,8 @@ Generate the following content for the brand "{brand}" and product "{product}" t
 
     with st.spinner("Generating..."):
         response = client.chat.completions.create(
-            model="gpt-4",
+         model="gpt-3.5-turbo",
+
             messages=[{"role": "system", "content": system_prompt}]
         )
         result = response.choices[0].message.content
